@@ -97,6 +97,8 @@
                 }
             }
         </script>
+
+        <style>
         
         <style>
             body {
@@ -198,6 +200,28 @@
             ::-webkit-scrollbar-thumb:hover {
                 background: #484f58;
             }
+       /* ANIMATED NEON GLOW */
+            @keyframes neonGlow {
+            0% {
+            box-shadow: 0 0 5px #00eaff, 0 0 10px #00eaff, 0 0 20px #00eaff;
+            }
+            50% {
+            box-shadow: 0 0 15px #00eaff, 0 0 30px #00eaff, 0 0 60px #00eaff;
+            }
+            100% {
+            box-shadow: 0 0 5px #00eaff, 0 0 10px #00eaff, 0 0 20px #00eaff;
+            }
+            }
+
+             .bg-terminal-card {
+            animation: neonGlow 2s infinite alternate;
+             transition: 0.3s;
+            }
+
+            .bg-terminal-card:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff, 0 0 80px #00eaff;
+            }     
         </style>
     </head>
     <body class="bg-terminal-bg text-terminal-text min-h-screen">  
@@ -347,7 +371,9 @@ document.addEventListener("click", function showIntroOnce() {
                     </div>
     
                     <!-- Audio Element (Hidden) -->
-                    <audio id="audioPlayer" class="hidden"></audio>
+                    <audio id="audioPlayer" autoplay loop>
+                       <source src="https://files.catbox.moe/ibfo4t.mp3" type="audio/mpeg">
+                      </audio>
     
                     <!-- Progress Bar -->
                     <div class="mt-4 mb-3">
@@ -499,6 +525,49 @@ document.addEventListener("click", function showIntroOnce() {
                      $ npm install qris
                  </div>
               </div>
+       <!-- GOPAY -->
+               <div class="bg-terminal-card border border-terminal-border rounded-lg p-4 mt-4 hover:border-terminal-cyan transition-all">
+
+                 <div class="flex items-center justify-between mb-2">
+                    <span class="font-mono text-sm">@wallet/gopay</span>
+                   <span class="text-xs px-2 py-1 bg-green-500/20 text-green-400 rounded font-mono">GOPAY</span>
+                  </div>
+
+                 <div class="bg-terminal-darker rounded-lg p-3 border border-terminal-border">
+                <p class="text-terminal-cyan font-mono text-lg">08871364244</p>
+              <p class="text-terminal-green text-xs font-mono">a.n Mxxx Rxxx</p>
+             </div>
+
+           </div>         
+    <!-- KROM BANK -->
+        <div class="bg-terminal-card border border-terminal-border rounded-lg p-4 mt-4 hover:border-terminal-cyan transition-all">
+
+              <div class="flex items-center justify-between mb-2">
+             <span class="font-mono text-sm">@bank/krombank</span>
+            <span class="text-xs px-2 py-1 bg-purple-500/20 text-purple-400 rounded font-mono">KROMBANK</span>
+           </div>
+
+        <div class="bg-terminal-darker rounded-lg p-3 border border-terminal-border">
+           <p class="text-terminal-cyan font-mono text-lg">770077421138</p>
+             <p class="text-terminal-green text-xs font-mono">a.n Mxxx Rxxx Ixxx Kxxx Zxxx</p>
+               </div>
+
+                  </div>    
+       <!-- SUPPORT SOCIABUZZ -->
+               <div class="bg-terminal-card border border-terminal-border rounded-lg p-4 mt-4 hover:border-terminal-yellow transition-all">
+
+             <div class="flex items-center space-x-2 mb-3">
+            <span class="font-mono text-sm text-terminal-yellow font-semibold">SUPPORT RAZAMODS</span>
+           </div>
+
+        <div class="bg-terminal-darker p-3 rounded border border-terminal-border">
+       <a href="https://sociabuzz.com/razamodsofficial_/tribe"
+          class="text-terminal-yellow hover:text-terminal-cyan font-mono text-xs">
+           Klik disini untuk dukung developer via SociaBuzz
+           </a>
+                </div>
+
+                    </div>             
 <!-- PRODUCT LIST -->
                         <div class="bg-terminal-card border border-terminal-border rounded-lg p-4 mt-4 hover:border-terminal-cyan transition-all group">
                             <div class="flex items-center space-x-2 mb-3">
@@ -512,7 +581,7 @@ document.addEventListener("click", function showIntroOnce() {
                             <div class="text-terminal-text text-xs font-mono leading-relaxed space-y-3">
 
                                 <div class="bg-terminal-darker p-3 rounded border border-terminal-border">
-                                <p class="text-terminal-green font-bold mb-1">SCRIPT EXOFLOODS GEN14.0 XVLOID</p>
+                                <p class="text-terminal-green font-bold mb-1">SCRIPT EXOFLOODS GENERATION</p>
                                 <hr class="border-terminal-border my-2">
 
                                 <p class="text-terminal-yellow font-semibold">👹 PRICE SCRIPT</p>
@@ -524,7 +593,7 @@ document.addEventListener("click", function showIntroOnce() {
 
                             <p class="text-terminal-green mt-3 font-semibold">Keamanan</p>
                           <p class="text-terminal-comment">
-                               Database Web ✅ <br>
+                               Menggunakan Database Berbasis Web ✅ <br>
                                Akses Panel Permanen Stiap User Script, VPS Private Ditanggung Developer, Anti Intip & Anti Colong Script✅
                            </p>
                        </div>
@@ -532,7 +601,7 @@ document.addEventListener("click", function showIntroOnce() {
                             <div class="bg-terminal-darker p-3 rounded border border-terminal-border">
                                 <p class="text-terminal-yellow font-semibold">👹 PRICE RESELLER / PARTNER</p>
                           <ul class="ml-4 list-disc space-y-1">
-                               <li>Rp 75.000 (Resseller Full Update)</li>
+                               <li>Rp 70.000 (Resseller Full Update)</li>
                                <li>Rp 100.000 (Owner Full Update)</li>
                                <li>Rp 120.000 (Tanga Kanan Full Update)</li>
                                <li>Rp 150.000 (Partner Full Update)</li>
@@ -572,7 +641,7 @@ document.addEventListener("click", function showIntroOnce() {
     <div class="text-terminal-text text-xs font-mono leading-relaxed space-y-4">
         <!-- FOUNDER DEVELOPER -->
         <div class="bg-terminal-darker p-3 rounded border border-terminal-border">
-            <p class="font-semibold text-terminal-cyan mb-1">FOUNDER DEVELOPER👹</p>
+            <p class="font-semibold text-terminal-cyan mb-1">FOUNDER DEVELOPER EXO👹</p>
             <p class="text-terminal-green font-semibold">Benefit:</p>
             <p class="mt-1">
                 Get TopTier title ExoFloods,Get Project Private RazaMods,FULL ACCES RazaMods Bisa Lu Pegang,GET SCRIPT² Private,Bisa Jual Base And No Enc Script,Get Biodata Di Script Biar Dikenal Anjai,Full Pengajaran New RazaMods,Get All Admin ch,Selalu diutamakan dev,Get All Project Exo, All No Enc Script, Get Owner Function,  
@@ -584,7 +653,7 @@ document.addEventListener("click", function showIntroOnce() {
         </div>
 <!-- CEO DEVELOPER -->
         <div class="bg-terminal-darker p-3 rounded border border-terminal-border">
-            <p class="font-semibold text-terminal-cyan mb-1">👑 C E O DEVELOPER</p>
+            <p class="font-semibold text-terminal-cyan mb-1">👑 C E O DEVELOPER EXO</p>
             <p class="text-terminal-green font-semibold">Benefit:</p>
             <p class="mt-1">
                 Get title ExoFloods Spesial,Get All Admin ch,Selalu diutamakan dev,Get 5 Project Exo, All No Enc Script, Get Owner Function,  
@@ -596,7 +665,7 @@ document.addEventListener("click", function showIntroOnce() {
         </div>
         <!-- DEV AGENCY -->
         <div class="bg-terminal-darker p-3 rounded border border-terminal-border">
-            <p class="font-semibold text-terminal-cyan mb-1">👑 DEV AGENCY</p>
+            <p class="font-semibold text-terminal-cyan mb-1">👑 DEV AGENCY EXO</p>
             <p class="text-terminal-green font-semibold">Benefit:</p>
             <p class="mt-1">
                 Get 5 Project Exo, All No Enc Script, Get Owner Function,  
@@ -609,7 +678,7 @@ document.addEventListener("click", function showIntroOnce() {
 
         <!-- AGENCY EXO -->
         <div class="bg-terminal-darker p-3 rounded border border-terminal-border">
-            <p class="font-semibold text-terminal-purple mb-1">👑 AGENCY EXO</p>
+            <p class="font-semibold text-terminal-purple mb-1">👑 STAF EXO</p>
             <p class="text-terminal-green font-semibold">Benefit:</p>
             <p class="mt-1">
                 Get 3 Project Exo, All No Enc Script, Function New Private,  
@@ -621,7 +690,7 @@ document.addEventListener("click", function showIntroOnce() {
 
         <!-- MODS SCRIPT -->
         <div class="bg-terminal-darker p-3 rounded border border-terminal-border">
-            <p class="font-semibold text-terminal-yellow mb-1">👑 MODS SCRIPT EXOFLOODS</p>
+            <p class="font-semibold text-terminal-yellow mb-1">👑 MODS EXO</p>
             <p class="text-terminal-green font-semibold">Benefit:</p>
             <p class="mt-1">
                 Get New Project Exorcist, All Product Bisa Dijual,  
@@ -633,7 +702,7 @@ document.addEventListener("click", function showIntroOnce() {
 
         <!-- AUTHOR SCRIPT -->
         <div class="bg-terminal-darker p-3 rounded border border-terminal-border">
-            <p class="font-semibold text-terminal-cyan mb-1">👑 AUTHOR SCRIPT EXOFLOODS</p>
+            <p class="font-semibold text-terminal-cyan mb-1">👑 AUTHOR EXO</p>
             <p class="text-terminal-green font-semibold">Benefit:</p>
             <p class="mt-1">
                 All Product ExoFloods Bisa Dijual, Get Admin CH,  
@@ -643,7 +712,7 @@ document.addEventListener("click", function showIntroOnce() {
 
         <!-- PT SCRIPT PRIBADI -->
         <div class="bg-terminal-darker p-3 rounded border border-terminal-border">
-            <p class="font-semibold text-terminal-pink mb-1">👑 PT SCRIPT PRIBADI</p>
+            <p class="font-semibold text-terminal-pink mb-1">👑 PT SCRIPT PRIBADI EXO</p>
             <p class="text-terminal-green font-semibold">Benefit:</p>
             <p class="mt-1">
                 Title PT ExoFloods Bisa Dijual, No Enc Script,  
@@ -664,7 +733,7 @@ document.addEventListener("click", function showIntroOnce() {
 
         <!-- TK RAZAMODS -->
         <div class="bg-terminal-darker p-3 rounded border border-terminal-border">
-            <p class="font-semibold text-terminal-yellow mb-1">👑 TK RAZAMODS</p>
+            <p class="font-semibold text-terminal-yellow mb-1">👑 TANGAN KANAN EXO</p>
             <p class="text-terminal-green font-semibold">Benefit:</p>
             <p class="mt-1">
                 Title Owner Bisa Dijual, dll.
@@ -673,7 +742,7 @@ document.addEventListener("click", function showIntroOnce() {
 
         <!-- OWNER SCRIPT -->
         <div class="bg-terminal-darker p-3 rounded border border-terminal-border">
-            <p class="font-semibold text-terminal-cyan mb-1">👑 OWNER SCRIPT EXOFLOODS</p>
+            <p class="font-semibold text-terminal-cyan mb-1">👑 OWNER EXO</p>
             <p class="text-terminal-green font-semibold">Benefit:</p>
             <p class="mt-1">
                 Bisa Open Ress Script ExoFloods, dll.
@@ -682,7 +751,7 @@ document.addEventListener("click", function showIntroOnce() {
 
         <!-- RESS SCRIPT -->
         <div class="bg-terminal-darker p-3 rounded border border-terminal-border">
-            <p class="font-semibold text-terminal-green mb-1">👑 RESS SCRIPT EXOFLOODS</p>
+            <p class="font-semibold text-terminal-green mb-1">👑 RESS EXO</p>
             <p class="text-terminal-green font-semibold">Benefit:</p>
             <p class="mt-1">
                 Bisa Open Buyer Permanent.
@@ -703,7 +772,7 @@ document.addEventListener("click", function showIntroOnce() {
                          <svg class="w-5 h-5 text-terminal-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"/>
                             </svg>
-                        <span class="font-mono text-sm text-terminal-purple font-semibold">NEW RELEASE — SC IMPROVE V20</span>
+                        <span class="font-mono text-sm text-terminal-purple font-semibold">SCRIPT IMPROVE</span>
                  </div>
 
                 <div class="text-terminal-text text-xs font-mono space-y-3 leading-relaxed">
@@ -716,7 +785,7 @@ document.addEventListener("click", function showIntroOnce() {
                   </div>
 
                       <div class="bg-terminal-darker p-3 rounded border border-terminal-border">
-                         <p class="text-terminal-yellow font-semibold mb-2">📌 TITLE SCRIPT — Price Tier</p>
+                         <p class="text-terminal-yellow font-semibold mb-2">TITLE SCRIPT — Price Tier</p>
                      <ul class="ml-4 list-disc space-y-1">
                              <li>Reseller : Rp 120.000</li>
                              <li>Owner Biasa : Rp 130.000</li>
@@ -740,7 +809,7 @@ document.addEventListener("click", function showIntroOnce() {
     <div class="text-terminal-text text-xs font-mono leading-relaxed space-y-3">
 
         <div class="bg-terminal-darker p-3 rounded border border-terminal-border space-y-1">
-            <p class="font-semibold text-terminal-cyan mb-1">🛠️ Layanan Digital Legal</p>
+            <p class="font-semibold text-terminal-cyan mb-1">🛠️ Layanan Digital Dan Hosting</p>
 
             <p>• Jasa Banned Whatsapp</p>
             <p>• Jasa Virtext/Bug Whatsapp</p>
@@ -770,6 +839,9 @@ document.addEventListener("click", function showIntroOnce() {
             <p>• Murid Banned Whatsapp</p>
             <p>• Murid Logo</p>
             <p>• Murid Nokos Whatsapp</p>
+            <p>• Admin Panel</p>
+            <p>• Reseller Pwnel</p>
+            <p>• Oener Panel</p>
             <p>• Konsultasi Developer (Premium)</p>
         </div>
 
@@ -827,13 +899,13 @@ document.addEventListener("click", function showIntroOnce() {
                  </div>
 
                        <div class="space-y-3 text-xs font-mono">
-                           <a href="https://t.me/RazaModsGantengBett?text=Hallo+Owner+RazaMods+Ganteng"
+                           <a href="https://t.me/RazaModsGantengBett?text=Hallo+Owner+RazaMods+Ganteng+Mau+Order"
                               class="block bg-terminal-darker p-3 rounded border border-terminal-border hover:border-terminal-purple transition-all">
                           <span class="text-terminal-purple">Telegram:</span>
                     <span class="text-terminal-text ml-1">Klik untuk chat</span>
                   </a>
 
-                       <a href="https://wa.me/6283178111554?text=Hallo+Owner+RazaMods+Ganteng"
+                       <a href="https://wa.me/6285198674436?text=Hallo+Owner+RazaMods+Ganteng"
                             class="block bg-terminal-darker p-3 rounded border border-terminal-border hover:border-terminal-green transition-all">
                                 <span class="text-terminal-green">WhatsApp:</span>
                                        <span class="text-terminal-text ml-1">Klik untuk chat</span>
@@ -856,14 +928,14 @@ document.addEventListener("click", function showIntroOnce() {
 
         <!-- WhatsApp Developer Channels -->
         <div class="bg-terminal-darker p-3 rounded border border-terminal-border space-y-2">
-            <p class="text-terminal-green font-semibold mb-1">📢 WhatsApp Developer Channels</p>
+            <p class="text-terminal-green font-semibold mb-1">WhatsApp Developer Channels</p>
 
-            <a href="https://whatsapp.com/channel/0029Vb6KMNq7IUYLgWR6KY0C"
+            <a href="https://whatsapp.com/channel/0029VbC8tpu4Y9lkrB9uT128"
                class="block hover:text-terminal-cyan transition-colors">
                 • Channel 1
             </a>
 
-            <a href="https://whatsapp.com/channel/0029VbCZ5cT1dAw5rZ2nBR2j"
+            <a href="https://whatsapp.com/channel/0029Vb7mmgqLikgGSmBzDb3N"
                class="block hover:text-terminal-cyan transition-colors">
                 • Channel 2
             </a>
@@ -897,7 +969,7 @@ document.addEventListener("click", function showIntroOnce() {
         <div class="bg-terminal-darker p-3 rounded border border-terminal-border">
             <p class="text-terminal-yellow font-semibold mb-1">👥 Group Public Informasi 2</p>
 
-            <a href="https://chat.whatsapp.com/LoW3gz7ItxAKlKDFhVjCRd"
+            <a href="https://chat.whatsapp.com/Bbm1FdtoFLI3hOAyd0TZFg?mode=gi_t"
                class="hover:text-terminal-yellow transition-colors">
                 • WhatsApp Group — Informasi Publik 2
             </a>
