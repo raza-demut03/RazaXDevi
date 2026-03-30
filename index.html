@@ -200,28 +200,34 @@
             ::-webkit-scrollbar-thumb:hover {
                 background: #484f58;
             }
-       /* ANIMATED NEON GLOW */
-            @keyframes neonGlow {
-            0% {
-            box-shadow: 0 0 5px #00eaff, 0 0 10px #00eaff, 0 0 20px #00eaff;
-            }
-            50% {
-            box-shadow: 0 0 15px #00eaff, 0 0 30px #00eaff, 0 0 60px #00eaff;
-            }
-            100% {
-            box-shadow: 0 0 5px #00eaff, 0 0 10px #00eaff, 0 0 20px #00eaff;
-            }
-            }
+/* RGB GLOW ANIMATION */
+@keyframes rgbGlow {
+0% {
+box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+}
+25% {
+box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+50% {
+box-shadow: 0 0 10px #0000ff, 0 0 20px #0000ff;
+}
+75% {
+box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+100% {
+box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+}
 
-             .bg-terminal-card {
-            animation: neonGlow 2s infinite alternate;
-             transition: 0.3s;
-            }
+.bg-terminal-card {
+animation: rgbGlow 3s linear infinite;
+transition: 0.3s;
+}
 
-            .bg-terminal-card:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff, 0 0 80px #00eaff;
-            }     
+.bg-terminal-card:hover {
+transform: translateY(-3px) scale(1.03);
+box-shadow: 0 0 20px #ffffff, 0 0 40px #ffffff;
+    }
         </style>
     </head>
     <body class="bg-terminal-bg text-terminal-text min-h-screen">  
@@ -436,7 +442,7 @@ document.addEventListener("click", function showIntroOnce() {
                     <h2 class="text-2xl sm:text-3xl font-bold mb-2 tracking-wide">RAZA MODS OFFICIAL</h2>
                     <p class="text-terminal-comment flex items-center space-x-2 mb-4">
                         <span class="text-terminal-green">➤</span>
-                        <span>Website System</span>
+                        <span>Website Official</span>
                     </p>
     
                     <!-- Bio Section -->
@@ -525,34 +531,46 @@ document.addEventListener("click", function showIntroOnce() {
                      $ npm install qris
                  </div>
               </div>
-       <!-- GOPAY -->
-               <div class="bg-terminal-card border border-terminal-border rounded-lg p-4 mt-4 hover:border-terminal-cyan transition-all">
-
-                 <div class="flex items-center justify-between mb-2">
-                    <span class="font-mono text-sm">@wallet/gopay</span>
-                   <span class="text-xs px-2 py-1 bg-green-500/20 text-green-400 rounded font-mono">GOPAY</span>
-                  </div>
-
-                 <div class="bg-terminal-darker rounded-lg p-3 border border-terminal-border">
-                <p class="text-terminal-cyan font-mono text-lg">08871364244</p>
-              <p class="text-terminal-green text-xs font-mono">a.n Mxxx Rxxx</p>
-             </div>
-
-           </div>         
-    <!-- KROM BANK -->
-        <div class="bg-terminal-card border border-terminal-border rounded-lg p-4 mt-4 hover:border-terminal-cyan transition-all">
-
-              <div class="flex items-center justify-between mb-2">
-             <span class="font-mono text-sm">@bank/krombank</span>
-            <span class="text-xs px-2 py-1 bg-purple-500/20 text-purple-400 rounded font-mono">KROMBANK</span>
-           </div>
-
-        <div class="bg-terminal-darker rounded-lg p-3 border border-terminal-border">
-           <p class="text-terminal-cyan font-mono text-lg">770077421138</p>
-             <p class="text-terminal-green text-xs font-mono">a.n Mxxx Rxxx Ixxx Kxxx Zxxx</p>
-               </div>
-
-                  </div>    
+                            <!-- Gopay Account Info -->
+                            <div class="bg-terminal-darker rounded-lg p-4 mb-3 border border-terminal-border">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-xs text-terminal-comment font-mono">Nomor Gopay</span>
+                                    <button onclick="copyToClipboard(&#39;08871364244&#39;)" class="text-xs text-terminal-cyan hover:text-terminal-cyan/80 font-mono flex items-center space-x-1 transition-colors">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                        </svg>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+                                <div class="text-terminal-cyan font-mono text-lg font-semibold mb-1">08871364244</div>
+                                <div class="text-terminal-green text-xs font-mono">a.n: M*****d R****y I***n K***l Z*****a</div>
+                            </div>
+                            
+                            <div class="bg-terminal-darker rounded px-3 py-2 font-mono text-xs text-terminal-green">
+                                $ npm install gopay
+                            </div>
+                        </div>
+            </div>
+                            <!-- DANA Account Info -->
+                            <div class="bg-terminal-darker rounded-lg p-4 mb-3 border border-terminal-border">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-xs text-terminal-comment font-mono">Nomor Rekening KromBank</span>
+                                    <button onclick="copyToClipboard(&#39;770077421138&#39;)" class="text-xs text-terminal-cyan hover:text-terminal-cyan/80 font-mono flex items-center space-x-1 transition-colors">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                        </svg>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+                                <div class="text-terminal-cyan font-mono text-lg font-semibold mb-1">770077421138</div>
+                                <div class="text-terminal-green text-xs font-mono">a.n: M*****d R****y I***n K***l Z*****a</div>
+                            </div>
+                            
+                            <div class="bg-terminal-darker rounded px-3 py-2 font-mono text-xs text-terminal-green">
+                                $ npm install krom_bank
+                            </div>
+                        </div>
+        </div>
        <!-- SUPPORT SOCIABUZZ -->
                <div class="bg-terminal-card border border-terminal-border rounded-lg p-4 mt-4 hover:border-terminal-yellow transition-all">
 
@@ -575,7 +593,7 @@ document.addEventListener("click", function showIntroOnce() {
                                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M3 7h18M3 12h18M3 17h18" />
                                    </svg>
-                            <span class="font-mono text-sm text-terminal-yellow font-semibold">PRODUCT LIST — EXOFLOODS GEN 13 - 14 XVLOID</span>
+                            <span class="font-mono text-sm text-terminal-yellow font-semibold">PRODUCT LIST — EXOFLOODS GENERATION</span>
                      </div>
 
                             <div class="text-terminal-text text-xs font-mono leading-relaxed space-y-3">
@@ -622,6 +640,7 @@ document.addEventListener("click", function showIntroOnce() {
                 </div>
 
                    <p class="text-terminal-green text-center mt-3 font-semibold">
+                          Boleh Nego Asal Ngotak Aja Ya
                           Terawat, Terurus, Anti Rehat! 💎
                       </p>
 
